@@ -2,7 +2,9 @@ Prerequisites
 =============
 
 The task description can be found [here](https://edux.fit.cvut.cz/courses/MI-MDW/hw/00/start).
-The task was using Python2.7. For succesuful run please install `lxml` -> `pip install lxml`.
+The task was done using Python2.7. 
+
+In order to run, please install `lxml` -> `pip install lxml`.
 
 How to run it
 -------------
