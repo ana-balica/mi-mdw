@@ -9,8 +9,8 @@ class MoneyManager(object):
         @param to: the account object where to an amount is added
         @param amount: the amount of money that is being transfered
         """
-        from_.sub(amount)
-        to.add(amount)
+        self.sub(from_, amount)
+        self.add(to, amount)
 
     def sub(self, from_, amount):
         """ Extract an amount of money from a user bank account
@@ -40,3 +40,18 @@ class UserBankAccount(object):
         @param amount: the amount of money of the user
         """
         self.amount = amount
+
+
+if __name__ == "__main__":
+    money_manager = MoneyManager()
+    user1 = UserBankAccount(100)
+    user2 = UserBankAccount(200)
+    print "Before the transfer"
+    print "==================="
+    print "User1:\t {0} units".format(user1.amount)
+    print "User2:\t {0} units".format(user2.amount)
+    money_manager.transfer_money(user1, user2, 50)
+    print "\nAfter the transfer"
+    print "=================="
+    print "User1:\t {0} units".format(user1.amount)
+    print "User2:\t {0} units".format(user2.amount)
