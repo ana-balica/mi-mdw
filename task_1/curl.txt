@@ -1,0 +1,40 @@
+$ curl mi-mdw.appspot.com/protocol/welcome
+OK
+Your next page is /protocol/get
+send GET parameter "name" with value "keep" 
+set Header "Accept" to "text/plain" 
+
+$ curl -H "Accept: text/plain" "http://mi-mdw.appspot.com/protocol/get?name=keep"
+OK
+Your next page is /protocol/post 
+send POST parameter "name" with value "sg"
+and set Header "Accept" is "text/plain" 
+and set Header "Accept-Language" is "en-US"
+
+$ curl --data "name=sg" -H "Accept: text/plain" -H "Accept-Language: en-US" http://mi-mdw.appspot.com/protocol/post
+OK
+Your next page is /protocol/referer 
+change referer to value "things"
+set Header "Accept" is "text/html"
+
+$ curl --referer things -H "Accept: text/html" http://mi-mdw.appspot.com/protocol/referer                        
+OK
+Your next page is /protocol/useragent
+and change User-Agent to value "definitions"
+and set Header "Accept-Language" is "en-US"
+
+$ curl --user-agent definitions -H "Accept-Language: en-US" http://mi-mdw.appspot.com/protocol/useragent
+OK
+Your next page is /protocol/cookie 
+send cookie called "name" with value "tims"
+
+$ curl --cookie "name=tims" http://mi-mdw.appspot.com/protocol/cookie
+OK
+Your next page is /protocol/auth 
+authenticate by "obligated:goatherd"
+set Header "Accept" is "text/html"
+
+$ curl --user obligated:goatherd -H "Accept:text/html" http://mi-mdw.appspot.com/protocol/auth
+OK
+Your final result is: unacceptable
+
