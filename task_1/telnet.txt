@@ -24,3 +24,25 @@ Transfer-Encoding: chunked
 OK
 
 0
+
+POST /httpTelnet2 HTTP/1.1
+Host: mi-mdw.appspot.com
+Referer: mi-mdw
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 8  
+
+data=fit
+
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Vary: Accept-Encoding
+Date: Sun, 20 Oct 2013 15:11:27 GMT
+Server: Google Frontend
+Cache-Control: private
+Alternate-Protocol: 80:quic
+Transfer-Encoding: chunked
+
+3
+OK
+
+0
