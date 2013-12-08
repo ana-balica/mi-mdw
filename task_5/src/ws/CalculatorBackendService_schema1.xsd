@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://ws/" xmlns:tns="http://ws/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="add" type="tns:add"/>
+
+  <xs:element name="addResponse" type="tns:addResponse"/>
+
+  <xs:element name="sub" type="tns:sub"/>
+
+  <xs:element name="subResponse" type="tns:subResponse"/>
+
+  <xs:complexType name="sub">
+    <xs:sequence>
+      <xs:element name="left" type="xs:double"/>
+      <xs:element name="right" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="subResponse">
+    <xs:sequence>
+      <xs:element name="result" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="add">
+    <xs:sequence>
+      <xs:element name="left" type="xs:double"/>
+      <xs:element name="right" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addResponse">
+    <xs:sequence>
+      <xs:element name="result" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

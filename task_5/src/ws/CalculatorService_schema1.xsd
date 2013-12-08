@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://ws/" xmlns:tns="http://ws/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="compute" type="tns:compute"/>
+
+  <xs:element name="computeResponse" type="tns:computeResponse"/>
+
+  <xs:complexType name="compute">
+    <xs:sequence>
+      <xs:element name="left" type="xs:double"/>
+      <xs:element name="operation" type="xs:string" minOccurs="0"/>
+      <xs:element name="right" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="computeResponse">
+    <xs:sequence>
+      <xs:element name="result" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
